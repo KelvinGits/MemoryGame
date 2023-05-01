@@ -58,6 +58,9 @@ class MemoryBoardAdapter(
         fun bind(position: Int) {
             val memoryCard = cards[position]
             if (memoryCard.isFaceUp){
+                //If the image url is empty, that means no images have been downloaded from
+                // Firestore so we should use the locally stored image if available else just use
+                // the placeholder image as a last resort
                 if (memoryCard.imageUrl != null){
                     Picasso.get().load(memoryCard.imageUrl).placeholder(R.drawable.ic_rose)
                         .into(imageButton)

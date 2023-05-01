@@ -17,7 +17,6 @@ class MemoryGame(private val boardSize: BoardSize, private val customImages: Lis
             val randomizedImages: List<String> = (customImages + customImages).shuffled()
             cards = randomizedImages.map { MemoryCard(it.hashCode() ,it) }
         }
-
     }
     fun flipCard(position: Int): Boolean {
         numCardFlips++

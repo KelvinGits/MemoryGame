@@ -268,6 +268,5 @@ class MainActivity : AppCompatActivity() {
         }
         tvNumMoves.text = "Moves: ${memoryGame.getNumMoves()}"
         adapter.notifyDataSetChanged()
-
     }
 }

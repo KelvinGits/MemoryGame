@@ -54,7 +54,6 @@ class ImagePickerAdapter(
                 imageClickListener.onPlaceholderClicked()
             }
         }
-
     }
 
 }
